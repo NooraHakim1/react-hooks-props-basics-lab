@@ -1,10 +1,17 @@
 import React from "react";
 
-function About() {
+function hasBio(bio) {
+  if (!bio) {
+    return "";
+  } else {
+    return <p>{bio}</p>;
+  }
+}
+function About(props) {
   return (
     <div id="about">
       <h2>About Me</h2>
-      <p>Put the bio in here</p>
+      {hasBio(props.bio)}
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
       {/* add your <Links /> component here */}
     </div>
